@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="backgroundContainer">
+        <h1>Maze Game</h1>
+        <div class="container jungle-theme">
+            <div id="mazeContainer">
+                <div id="gameCanvasContainer" class="hide">
+                    <canvas id="gameCanvas"></canvas>
+                </div>
+                <div id="message" class="hide jungle-message"></div>
+                <ul id="scoreList" class="hide jungle-score-list"></ul>
+            </div>
+            <div id="leaderboardContainer" class="hide jungle-leaderboard" style="font-family: caviet,cursive;" >
+                <h2 style="color:#3b7a57">Leaderboard</h2>
+                <ul id="leaderboard"></ul>
+            </div>
+            <div id="instructionMessage" class="instruction-message jungle-message"></div>
+            <div id="gameoverMessage" class="game-over-message jungle-message"></div>
+            <div id="levelcompletedMessage" class="level-completed-message jungle-message"></div>
+            <form id="gameForm">
+                <label for="playerName" style="color:black; font-family: caviet, cursive;">ENTER YOUR NAME:</label>
+                <input type="text" id="playerName" name="playerName" style="font-family: caviet;"required>
+                <br>
+                <label for="difficulty" style="color:BLACK; font-family: caviet, CURSIVE;" >CHOOSE DIFFICULTY:</label>
+                <select id="difficulty" name="difficulty" style="font-family: caviet,cursive;">
+                    <option value="easy" style="font-family: caviet,cursive;" >Easy</option>
+                    <option value="medium"  style="font-family: caviet,cursive;">Medium</option>
+                    <option value="hard" style="font-family: caviet,cursive;" >Hard</option>
+                </select>
+                <br>
+                <button type="button" id="startGame">Start Game</button>
+            </form>
+        </div>
+        <div id="instructions" class = "hide">
+            <div class="panel-content">
+            <h2>Instructions</h2>
+            <h3>Movement Controls:</h3>
+            <p>Use the arrow keys to navigate your character.</p>
+            <h3>Objective:</h3>
+            <p>Avoid being caught by the Chaser.</p>
+            <p>Collect coins to increase your score. Each coin is worth 10 points.</p>
+            <h3>Scoring:</h3>
+            <p>Accumulate points by collecting coins throughout the levels. </p>
+            <h3>Starting the Game:</h3>
+            <p>Select your desired difficulty level to begin.</p>
+            <p>For maximum points, it is recommended to start from the easy level and progress through to the final level.
+            </p>
+            <h3>Level Goals:</h3>
+            <p>In each level, your primary objective is to obtain the jewel. </p>
+            <p> Successfully collecting the jewel before being caught by the Chaser will allow you to advance to the next level.</p>
+            <button type="button" id="ok-button">Ok</button>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="gameAudio" src="audio/forest-sound.mp3" loop></audio>
+    <audio id="coinAudio" src="audio/coin.mp3"></audio>
+    <audio id ="killing_Audio" src = "audio/killing_Audio.mp3"></audio>
+    <img id="player" src="character.png" class="hide" alt = "Character Image">
+    <script src="script.js"></script>
+</body>
+</html>
