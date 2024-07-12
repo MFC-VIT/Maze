@@ -496,10 +496,10 @@ okButton.addEventListener('click', () => {
 
     
 });
-// function clearLeaderboard() {
-//     localStorage.removeItem('scores');
-//     updateScore();
-// }
+function clearLeaderboard() {
+    localStorage.removeItem('scores');
+    updateScore();
+}
 clearLeaderboard();
 updateScore();
 
